@@ -62,10 +62,30 @@
     margin-top: 10px;
   }
   .homepageLink{
-    color: #6de977;
+    color: #f8fbf4;
     font-size: 17px;
     font-weight: bold;
     font-style: oblique;
+  }
+}
+.dashboardTopSection{
+  width: 100%;
+  float: left;
+  background: #47d8df;
+  .welcomeUser{
+   color: #2837419e;
+   float: left;
+   width: 70%;
+   margin-left: 10px;
+  }
+  .dashboardLinks{
+   float: left;
+   width: 28%;
+   text-align: right;
+   margin-top:25px;
+   .dashboardLink{
+     padding: 5px;
+   }
   }
 }
 
