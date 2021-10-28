@@ -1,8 +1,15 @@
-<h1>Login</h1>
-   <%= form_tag '/login' do %>
-   <%= label_tag :username%>
-   <%= text_field_tag :username %>
-   <%= label_tag :password%>
-   <%= password_field_tag :password%>
-   <%= submit_tag "Login"%>
-<%end%>
+<div class="loginFormOuter" style="background-image:url(<%= asset_path('algo_trading.jpeg') %>)";>
+  <div class="loginForm">
+    <div class="loginHeader">Login</div>
+    <%= form_tag '/login' do %>
+      <%= label_tag :username, nil, class: 'loginCredentialsHeader'%><br>
+      <%= text_field_tag :username, "", class: 'loginCredentials'%><br><br>
+      <%= label_tag :password, nil, class: 'loginCredentialsHeader'%><br>
+      <%= password_field_tag :password, "", class: 'loginCredentials'%><br><br>
+      <%= submit_tag "Login"%>
+    <%end%>
+  </div>
+  <div class="homepageLinkSection">
+    <%= link_to "Back to homepage", '/welcome', method: :get, class: "homepageLink"%>
+  </div>
+</div>

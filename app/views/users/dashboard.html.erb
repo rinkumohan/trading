@@ -1,4 +1,5 @@
-<h1>Welcome</h1>
 <% if user_logged_in? %>
-    <h1>You are Logged In, <%= current_user.username %></h1>
+    <h3>Welcome, <%= current_user.username %></h3>
+
+    <%= link_to "Log out", '/logout', method: :get%>
 <%end%>

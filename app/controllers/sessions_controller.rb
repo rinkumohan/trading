@@ -1,9 +1,12 @@
 class SessionsController < ApplicationController
 
-  skip_before_action :authorize_resource, only: [:new, :welcome]
+  skip_before_action :authorize_resource, only: [:new, :create, :welcome]
   before_action :find_user, only: [:create]
 
   def new
+    if user_logged_in?
+      redirect_to dashboard_path
+    end
   end
 
   def create
@@ -15,10 +18,9 @@ class SessionsController < ApplicationController
     end
   end
 
-  def login
-  end
-
-  def welcome
+  def logout
+    session[:user_id] = nil
+    redirect_to '/welcome'
   end
 
   private

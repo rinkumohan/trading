@@ -3,24 +3,71 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .appHeader{
-  background: lightgray;
-  text-align: center;
+  background: #47d8df;
   height: 61px;
   padding: 5px;
-  width: 100%;
+  width: 99.3%;
+  .appHeading{
+    width: 78%;
+    float: left;
+    margin-left: 10px;
+    color: #2837419e;
+  }
+  .appHead{
+    float: left;
+  }
+  .dareToDream{
+    float: left;
+    margin-top: 26px;
+    margin-left: 20px;
+  }
 }
-
 .algo_trading_img{
   width:100%;
+  margin-top: -2px;
 }
-
-.appHeading{
-  width: 80%;
-  float: left;
-}
-
 .loginSection{
   width: 20%;
   text-align: right;
   float: left;
+  margin-top: 24px;
 }
+.loginFormOuter{
+  width: 100%;
+  height: 900px;
+  background-size: cover;
+  .loginForm{
+    width:100%;
+    text-align: center;
+    padding-top: 12%;
+    color: #05f9f9;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #3d6a85, 1px -1px 0 #3d6a85, -1px 1px 0 #000, 1px 1px 0 #3d6a85;
+    font-style: oblique;
+
+    .loginCredentials{
+      font-size: 24px;
+    }
+    .loginHeader{
+      font-size: 40px;
+      padding: 30px;
+    }
+    .loginCredentialsHeader{
+      font-size: 20px;
+    }
+  }
+  .homepageLinkSection{
+    width:100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .homepageLink{
+    color: #6de977;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: oblique;
+  }
+}
+
+
+
