@@ -4,8 +4,13 @@
     <div class="dareToDream"> Dare to dream..! </div>
   </div>
   <div class="loginSection">
-    <%= link_to "Login", 'login', method: :get%> |
-    <%= link_to "Sign Up", '/users/new', method: :get%>
+    <% if user_logged_in? %>
+      <span class="dashboardLink"> <%= link_to "Dashboard", '/dashboard', method: :get%> </span>
+      <span class="dashboardLink"> <%= link_to "Log out", '/logout', method: :get%> </span>
+    <%else%>
+      <%= link_to "Login", 'login', method: :get%> |
+      <%= link_to "Sign Up", '/users/new', method: :get%>
+    <%end%>
   </div>
 </div>
 
