@@ -6,9 +6,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 <body>
 
 <%= yield %>
+
+
+
+<style type="text/css">
+  .alert-success{
+    color: green;
+  }
+  .alert-danger{
+    color: red;
+  }
+</style>
 
 </body>
 </html>

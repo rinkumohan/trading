@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to dashboard_path
     else
-      redirect_to '/login'
+      redirect_to '/login', alert: "Invalid login credentials!"
     end
   end
 
