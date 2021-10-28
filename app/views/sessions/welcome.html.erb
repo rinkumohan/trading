@@ -1,0 +1,14 @@
+<div class="appHeader">
+  <div class="appHeading">
+    <h2> Algo Trading App </h2>
+  </div>
+  <div class="loginSection">
+    <%= link_to "Login", 'login', method: :get%> |
+    <%= link_to "Sign Up", '/users/new', method: :get%>
+  </div>
+</div>
+
+<div>
+  <%= image_tag(root_url[/[^\?]+/] + asset_path("algo_trading.jpeg"), :class => "algo_trading_img")%>
+</div>
+

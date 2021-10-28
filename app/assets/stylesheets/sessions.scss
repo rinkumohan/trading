@@ -1,4 +1,4 @@
-// Place all the styles related to the welcome controller here.
+// Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -7,8 +7,20 @@
   text-align: center;
   height: 61px;
   padding: 5px;
+  width: 100%;
 }
 
 .algo_trading_img{
   width:100%;
+}
+
+.appHeading{
+  width: 80%;
+  float: left;
+}
+
+.loginSection{
+  width: 20%;
+  text-align: right;
+  float: left;
 }
