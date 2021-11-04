@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'welcome', to: 'sessions#welcome'
   get 'logout', to: 'sessions#logout'
 
+  resources :charts, only: [:index]
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
