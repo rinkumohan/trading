@@ -15,4 +15,7 @@ VALID_RANGES =  [
                 ]
 
 VALID_GRANULARITIES = ["1m", "5m", "1d"]
-
+REGION = "US"
+LANGUAGE = "en"
+DEFAULT_RANGE = "1d"
+DEFAULT_INTERVAL = "5m"

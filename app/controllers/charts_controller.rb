@@ -12,7 +12,9 @@ class ChartsController < ApplicationController
   private
 
   def prepare_chart_params
-    @chart_params = {range: "1d", region: "US", lang: "en", interval: "5m"}
+    range = params[:range] || DEFAULT_RANGE
+    interval = params[:interval] || DEFAULT_INTERVAL
+    @chart_params = {range: range, interval: interval, region: REGION, lang: LANGUAGE }
   end
 
 end
