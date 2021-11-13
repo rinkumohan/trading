@@ -1,2 +1,29 @@
+<%= form_tag(update_chart_data_path, method: :get) do %>
+  <div class="chartFilterSection">
+    <div class="tickerSelectBox">
+      Ticker:
+      <%= select_tag "ticker", options_for_select(@tickers.map{ |ticker| ["#{ticker.symbol} | #{ticker.name}", ticker.symbol] }), class: "js-example-basic-single tickerSelect"%>
+    </div>
+    <div class="rangeSelectBox">
+      Range:
+      <%= select_tag "range", options_for_select(VALID_RANGES, DEFAULT_RANGE), class: "rangeSelect"%>
+    </div>
+    <div class="intervalSelectBox">
+      Interval:
+      <%= select_tag "interval", options_for_select(VALID_GRANULARITIES, DEFAULT_INTERVAL), class: "intervalSelect"%>
+    </div>
+  </div>
+<%end%>
 
-<%= candlestick_chart(@candlestick_data, @candlestick_options) %>
+<br><br>
+
+<div class="ChartSection">
+  <%= candlestick_chart(@candlestick_data, @candlestick_options) %>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.js-example-basic-single').select2();
+  });
+</script>

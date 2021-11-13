@@ -1,11 +1,4 @@
-<% if user_logged_in? %>
-  <div class="dashboardTopSection">
-    <h3 class="welcomeUser">Welcome, <%= current_user.username %></h3>
-    <div class="dashboardLinks">
-      <span class="dashboardLink"> <%= link_to "Dashboard", dashboard_path%> </span>
-      <span class="dashboardLink"> <%= link_to "Log out", logout_path%> </span>
-    </div>
-  </div>
-<%end%>
+
+<h3 class="welcomeUser">Welcome, <%= current_user.username %></h3>
 
 <span class="chartLink"> <%= link_to "Show charts", charts_path%> </span>

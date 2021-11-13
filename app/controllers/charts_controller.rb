@@ -1,7 +1,9 @@
 class ChartsController < ApplicationController
   include ChartsConcern
 
+  before_action :load_ticker_values
   before_action :prepare_chart_params
+
 
   def index
     yf_service = YahooFinance.new(@chart_params, 'AAPL')
@@ -9,7 +11,15 @@ class ChartsController < ApplicationController
     get_candlestick_data
   end
 
+  def update_chart_data
+
+  end
+
   private
+
+  def load_ticker_values
+    @tickers = Ticker.all
+  end
 
   def prepare_chart_params
     range = params[:range] || DEFAULT_RANGE

@@ -14,7 +14,7 @@ VALID_RANGES =  [
                   "max"
                 ]
 
-VALID_GRANULARITIES = ["1m", "5m", "1d"]
+VALID_GRANULARITIES = ["1m", "5m", "15m", "1d", "1wk", "1mo"]
 REGION = "US"
 LANGUAGE = "en"
 DEFAULT_RANGE = "1d"
