@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#logout'
 
   resources :charts, only: [:index]
+  get 'update_chart_data', to: 'charts#update_chart_data'
 
 
 

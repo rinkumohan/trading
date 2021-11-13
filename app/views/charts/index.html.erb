@@ -1,29 +1,23 @@
-<%= form_tag(update_chart_data_path, method: :get) do %>
+<%= form_tag(update_chart_data_path, method: :get, id: "updateChartForm", remote: :true) do |f| %>
   <div class="chartFilterSection">
     <div class="tickerSelectBox">
       Ticker:
-      <%= select_tag "ticker", options_for_select(@tickers.map{ |ticker| ["#{ticker.symbol} | #{ticker.name}", ticker.symbol] }), class: "js-example-basic-single tickerSelect"%>
+      <%= select_tag("ticker", options_for_select(@tickers.map{ |ticker| ["#{ticker.symbol} | #{ticker.name}", ticker.symbol]}, @ticker), class: "tickerSearch tickerSelect")%>
     </div>
     <div class="rangeSelectBox">
       Range:
-      <%= select_tag "range", options_for_select(VALID_RANGES, DEFAULT_RANGE), class: "rangeSelect"%>
+      <%= select_tag "range", options_for_select(VALID_RANGES, @range), class: "rangeSelect"%>
     </div>
     <div class="intervalSelectBox">
       Interval:
-      <%= select_tag "interval", options_for_select(VALID_GRANULARITIES, DEFAULT_INTERVAL), class: "intervalSelect"%>
+      <%= select_tag "interval", options_for_select(VALID_GRANULARITIES, @interval), class: "intervalSelect"%>
     </div>
   </div>
 <%end%>
 
 <br><br>
 
-<div class="ChartSection">
-  <%= candlestick_chart(@candlestick_data, @candlestick_options) %>
+<div class="ChartSectionOuter">
+  <%= render "charts/multi_charts" %>
 </div>
 
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.js-example-basic-single').select2();
-  });
-</script>

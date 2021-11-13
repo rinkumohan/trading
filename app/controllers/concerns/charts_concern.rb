@@ -19,7 +19,7 @@ module ChartsConcern
     @candlestick_data = @timestamps.map.with_index{|timestamp, i| [Time.at(timestamp).to_datetime, ohlc(i)]}.to_h
   end
 
-  def ohlc(i) #abbreviate of open, high, low, close (ohlc)
+  def ohlc(i) #abbreviate for open, high, low, close (ohlc)
     open = @quote["open"][i]
     high = @quote["high"][i]
     low = @quote["low"][i]
